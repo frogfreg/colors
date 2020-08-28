@@ -1,0 +1,79 @@
+/* #f2f2f2
+#00E6F0
+#00FF00
+#FFFF00
+#FF6800
+#FF14AB
+#F2059F
+#48038C
+#5204BF
+#100126
+#0F0140  */
+
+.background-light {
+  background-color: #f2f2f2;
+}
+.dark-color a {
+  color: #48038c;
+}
+.navbar-brand {
+  font-size: 2rem;
+  transition: all 2s;
+}
+a {
+  transition: color 0.5s;
+}
+
+.navbar-brand:hover {
+  background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.nav-link {
+  transition: all 0.2s;
+}
+.nav-link:hover {
+  border-bottom: 0.4rem solid #48038c;
+}
+
+@keyframes rainbow {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
