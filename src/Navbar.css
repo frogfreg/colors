@@ -9,7 +9,11 @@
 #5204BF
 #100126
 #0F0140  */
-
+nav {
+  -webkit-box-shadow: -13px 9px 29px -22px rgba(0, 0, 0, 0.79);
+  -moz-box-shadow: -13px 9px 29px -22px rgba(0, 0, 0, 0.79);
+  box-shadow: -13px 9px 29px -22px rgba(0, 0, 0, 0.79);
+}
 .background-light {
   background-color: #f2f2f2;
 }
@@ -20,19 +24,16 @@
   font-size: 2rem;
   transition: all 2s;
 }
-a {
-  transition: color 0.5s;
-}
 
 .navbar-brand:hover {
   background: linear-gradient(90deg, #fc466b 0%, #3f5efb 100%);
   background-clip: text;
-
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  animation: fadingIn 2s;
 }
 .nav-link {
-  transition: all 0.2s;
+  transition: border-bottom 0.2s;
 }
 .nav-link:hover {
   border-bottom: 0.4rem solid #48038c;
@@ -75,5 +76,13 @@ a {
   }
   91% {
     color: rgb(255, 0, 127);
+  }
+}
+@keyframes fadingIn {
+  0% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
   }
 }
