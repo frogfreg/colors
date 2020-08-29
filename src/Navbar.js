@@ -12,7 +12,7 @@ function Navbar() {
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
             <a className="nav-link" href="#">
-              Palettes <span className="sr-only">(current)</span>
+              Add new palette <span className="sr-only">(current)</span>
             </a>
           </li>
         </ul>
