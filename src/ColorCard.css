@@ -1,0 +1,14 @@
+.card {
+  position: relative;
+  margin-bottom: 0.5rem;
+  border: 0.2rem solid rgba(0, 0, 0, 0.212);
+  transition: all 0.5s;
+}
+.card:hover {
+  transform: translateY(-0.3rem);
+  cursor: pointer;
+}
+.card-title svg {
+  position: absolute;
+  right: 1rem;
+}
