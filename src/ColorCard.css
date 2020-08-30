@@ -8,7 +8,6 @@
   transform: translateY(-0.3rem);
   cursor: pointer;
 }
-.card-title svg {
-  position: absolute;
-  right: 1rem;
+.edit-icon:hover {
+  background-color: purple;
 }

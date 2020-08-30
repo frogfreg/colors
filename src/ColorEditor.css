@@ -5,7 +5,41 @@
 h2 svg {
   margin-left: 1rem;
 }
+.form-inline {
+  position: relative;
+}
 
-.form-row {
-  margin-top: 1rem;
+#newColorInput {
+  margin: 0 1rem;
+}
+.sample {
+  height: 2rem;
+  width: 4rem;
+  border: 0.2rem solid rgba(0, 0, 0, 0.308);
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .col-md.colors {
+    height: 50vh;
+  }
+}
+
+.redbg {
+  background-color: red;
+}
+
+.bluebg {
+  background-color: blue;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  background-color: #8c26f2;
+  color: #ffffff;
+}
+.colors {
+  text-align: center;
 }
