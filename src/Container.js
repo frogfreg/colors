@@ -73,8 +73,6 @@ function Container() {
         return card.id !== id;
       })
     );
-
-    console.log("after update locals");
   };
 
   const updateName = (id, newName) => {
