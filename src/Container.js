@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Route, Switch } from "react-router-dom";
 import Navbar from "./Navbar";
 import ColorDisplay from "./ColorDisplay";
 import ColorEditor from "./ColorEditor";
@@ -53,13 +54,19 @@ function Container() {
   return (
     <div>
       <Navbar />
-      <ColorDisplay cards={cards} />
-      {/* <ColorEditor
-        colorInfo={cards[0]}
-        cardId={0}
-        updateName={updateName}
-        updateColor={updateColor}
-      /> */}
+      <Switch>
+        <Route exact path="/" component={<ColorDisplay />}>
+          <ColorDisplay cards={cards} />
+        </Route>
+        <Route exact path="/editor" component={<ColorDisplay />}>
+          <ColorEditor
+            colorInfo={cards[0]}
+            cardId={0}
+            updateName={updateName}
+            updateColor={updateColor}
+          />
+        </Route>
+      </Switch>
     </div>
   );
 }

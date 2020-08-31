@@ -1,13 +1,14 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg dark-color background-light">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           Color Storage
-        </a>
+        </Link>
 
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
