@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import "./ColorEditor.css";
 import ColorBox from "./ColorBox";
+import { useParams } from "react-router-dom";
 function ColorEditor(props) {
   const [newColorInput, setNewColorInput] = useState("");
   const [nameEdit, setNameEdit] = useState(false);
-  const [newName, setNewName] = useState(props.colorInfo.name);
+  let { cardId } = useParams();
+  cardId = parseInt(cardId);
+  const colorInfo = props.cards.find((card) => {
+    return card.id === cardId;
+  });
+  const [newName, setNewName] = useState(colorInfo.name);
+
   return (
     <div className="container">
       <div className="row">
@@ -19,8 +26,9 @@ function ColorEditor(props) {
               value={newName}
             />
             <button
-              onClick={() => {
-                props.updateName(props.colorInfo.id, newName);
+              onClick={(event) => {
+                event.preventDefault();
+                props.updateName(colorInfo.id, newName);
                 setNameEdit(false);
               }}
               class="btn btn-primary mr-3 ml-3"
@@ -30,7 +38,7 @@ function ColorEditor(props) {
           </form>
         ) : (
           <h2>
-            {props.colorInfo.name}
+            {colorInfo.name}
             <svg
               onClick={() => {
                 setNameEdit(true);
@@ -52,13 +60,13 @@ function ColorEditor(props) {
       </div>
 
       <div className="row color-show">
-        {props.colorInfo.colors.map((color, index) => {
+        {colorInfo.colors.map((color, index) => {
           return (
             <ColorBox
               color={color}
               index={index}
               updateColor={props.updateColor}
-              cardId={props.cardId}
+              cardId={cardId}
             />
           );
         })}

@@ -15,6 +15,7 @@ function ColorBox(props) {
       <button
         onClick={() => {
           props.updateColor(props.cardId, props.index, colorValue);
+          console.log(props);
         }}
         class="btn btn-primary mr-3 ml-3"
       >

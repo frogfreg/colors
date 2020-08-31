@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Navbar from "./Navbar";
 import ColorDisplay from "./ColorDisplay";
 import ColorEditor from "./ColorEditor";
+
 const examples = [
   {
     name: "Panthone blue",
@@ -55,13 +56,20 @@ function Container() {
     <div>
       <Navbar />
       <Switch>
-        <Route exact path="/" component={<ColorDisplay />}>
+        <Route exact path="/">
           <ColorDisplay cards={cards} />
         </Route>
-        <Route exact path="/editor" component={<ColorDisplay />}>
+        {/* <Route exact path="/editor:cardId">
           <ColorEditor
             colorInfo={cards[0]}
-            cardId={0}
+            cardId={1}
+            updateName={updateName}
+            updateColor={updateColor}
+          />  
+        </Route> */}
+        <Route exact path="/editor/:cardId">
+          <ColorEditor
+            cards={cards}
             updateName={updateName}
             updateColor={updateColor}
           />
