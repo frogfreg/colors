@@ -3,11 +3,13 @@
   margin-bottom: 0.5rem;
   border: 0.2rem solid rgba(0, 0, 0, 0.212);
   transition: all 0.5s;
+  background-color: #fffafa;
 }
 .card:hover {
   transform: translateY(-0.3rem);
   cursor: pointer;
 }
-.edit-icon:hover {
-  background-color: purple;
+.edit-icon:hover,
+.delete-icon:hover {
+  background-color: #c547ff;
 }

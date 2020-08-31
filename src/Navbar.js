@@ -1,8 +1,10 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
-function Navbar() {
+function Navbar(props) {
+  const newId = uuidv4();
   return (
     <div>
       <nav className="navbar navbar-expand-lg dark-color background-light">
@@ -11,11 +13,19 @@ function Navbar() {
         </Link>
 
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">
-              Add new palette <span className="sr-only">(current)</span>
-            </a>
-          </li>
+          {props.editorIsActive ? null : (
+            <li className="nav-item active">
+              <Link
+                onClick={() => {
+                  props.addNewCard(newId);
+                }}
+                to={`/editor/${newId}`}
+                className="nav-link"
+              >
+                Add new colors <span className="sr-only">(current)</span>
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </div>

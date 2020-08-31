@@ -1,7 +1,9 @@
 .color-show {
   text-align: center;
 }
-
+.Color-editor {
+  margin-top: 2rem;
+}
 h2 svg {
   margin-left: 1rem;
 }

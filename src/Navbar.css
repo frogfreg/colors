@@ -13,7 +13,7 @@ nav {
   -webkit-box-shadow: -13px 9px 29px -22px rgba(0, 0, 0, 0.79);
   -moz-box-shadow: -13px 9px 29px -22px rgba(0, 0, 0, 0.79);
   box-shadow: -13px 9px 29px -22px rgba(0, 0, 0, 0.79);
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 .background-light {
   background-color: #f2f2f2;
@@ -81,7 +81,7 @@ nav {
 }
 @keyframes fadingIn {
   0% {
-    opacity: .5;
+    opacity: .6;
   }
   100% {
     opacity: 1;

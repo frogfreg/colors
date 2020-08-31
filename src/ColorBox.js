@@ -15,11 +15,18 @@ function ColorBox(props) {
       <button
         onClick={() => {
           props.updateColor(props.cardId, props.index, colorValue);
-          console.log(props);
         }}
-        class="btn btn-primary mr-3 ml-3"
+        className="btn btn-primary mr-3 ml-3"
       >
         Update
+      </button>
+      <button
+        onClick={() => {
+          props.deleteColor(props.cardId, props.index);
+        }}
+        className="btn btn-primary mr-3 ml-3"
+      >
+        Delete
       </button>
     </div>
   );
