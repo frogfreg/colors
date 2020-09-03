@@ -62,20 +62,6 @@ function ColorEditor(props) {
         )}
       </div>
 
-      <div className="row color-show">
-        {colorInfo.colors.map((color, index) => {
-          return (
-            <ColorBox
-              color={color}
-              index={index}
-              updateColor={props.updateColor}
-              cardId={cardId}
-              deleteColor={props.deleteColor}
-              key={`${cardId}${color}${index}`}
-            />
-          );
-        })}
-      </div>
       <div className="row mt-3">
         <div className="col">
           <form className="form-inline">
@@ -99,8 +85,10 @@ function ColorEditor(props) {
             <button
               onClick={(event) => {
                 event.preventDefault();
-                props.addNewColor(cardId, newColorInput);
-                setNewColorInput("");
+                if (newColorInput !== "") {
+                  props.addNewColor(cardId, newColorInput);
+                  setNewColorInput("");
+                }
               }}
               className="btn btn-primary mr-3 ml-3"
             >
@@ -108,6 +96,21 @@ function ColorEditor(props) {
             </button>
           </form>
         </div>
+      </div>
+
+      <div className="row color-show">
+        {colorInfo.colors.map((color, index) => {
+          return (
+            <ColorBox
+              color={color}
+              index={index}
+              updateColor={props.updateColor}
+              cardId={cardId}
+              deleteColor={props.deleteColor}
+              key={`${cardId}${color}${index}`}
+            />
+          );
+        })}
       </div>
     </div>
   );
